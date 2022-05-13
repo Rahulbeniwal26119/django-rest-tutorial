@@ -10,8 +10,8 @@ import rest_framework.throttling as rest_throttling
 
 #######################################################################
 #   UserRateThrottle -> Throttling for both Auth and Non Auth Users   #
-#   - Rate is set for only auth users using custom Rate Throttlers 
-#   - so for non auth users 'anon' will fetch from settings 
+#   - Rate is set for only auth users using custom Rate Throttlers    #
+#   - so for non auth users 'anon' will fetch from settings           #
 #   AnonRateThrottle -> Throttling for Only Non Auth Users Auth       # 
 #   - users are free to make inf requests                             #
 #######################################################################
