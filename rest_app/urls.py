@@ -25,4 +25,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')), # login logout urls
     path('snippets/', include('snippets.urls')),
     path('throttle/', include('throttling.urls')),
+    path('pagination/', include('pagination.urls')),
 ]
