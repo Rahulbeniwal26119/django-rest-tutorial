@@ -40,19 +40,20 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_extensions',
     'rest_app_1',
-    'snippets.apps.SnippetsConfig'
+    'snippets.apps.SnippetsConfig',
+    'pagination'
 ]
 
 NUM_PROXIES = 1 
 REST_FRAMEWORK = {
-    "DEFAULT_PAGINATION_CLASS": 'rest_framework.pagination.PageNumberPagination',
+    "DEFAULT_PAGINATION_CLASS": 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',
         'rest_framework.throttling.UserRateThrottle'
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '10/day',
+        'anon': '10000/day',
         'user': '100/day',
         'burst': '10/min',
         'sustained': '1000/day'
